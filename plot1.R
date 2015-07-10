@@ -7,6 +7,7 @@ f = file(datafile, open = "rt")
 firstline = readLines(f, n = 1)
 close(f)
 
+#   Split header string on semi-colons to get vector of column names
 headers = strsplit(firstline, ";")[[1]]
 
 # Calculate row numbers to read in.  Assumes data is sorted by date/time.
